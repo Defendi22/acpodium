@@ -265,7 +265,7 @@ function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-0"
       style={{
         backgroundImage: "url('/images/hero-bg.jpg')",
         backgroundSize: "cover",
@@ -280,7 +280,7 @@ function HeroSection() {
 
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/40 rounded-full px-5 py-2 mb-8 animate-fadeIn">
+        <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/40 rounded-full px-5 py-2 mb-8 mt-2 sm:mt-0 animate-fadeIn">
           <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
           <span className="text-yellow-400 text-sm font-bold tracking-widest uppercase">
             A Melhor Academia de Cabreúva
@@ -587,7 +587,7 @@ function ContactSection() {
     e.preventDefault();
     // WhatsApp integration
     const msg = `Olá! Gostaria de informações sobre a Academia Podium Cabreúva.%0A%0A*Nome:* ${form.name}%0A*Telefone:* ${form.phone}%0A*Email:* ${form.email}%0A*Modalidade de Interesse:* ${form.modality}%0A*Mensagem:* ${form.message}`;
-    window.open(`https://wa.me/5511999999999?text=${msg}`, "_blank");
+    window.open(`https://wa.me/5511940763058?text=${msg}`, "_blank");
     setSent(true);
     setTimeout(() => setSent(false), 4000);
   };
@@ -720,7 +720,7 @@ function ContactSection() {
 
             {/* CTA WhatsApp */}
             <a
-              href="https://wa.me/5511999999999?text=Olá!+Quero+saber+mais+sobre+a+Academia+Podium+em+Cabreúva"
+              href="https://wa.me/5511940763058?text=Olá!+Quero+saber+mais+sobre+a+Academia+Podium+em+Cabreúva"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 bg-green-600 hover:bg-green-500 transition-colors duration-300 rounded-2xl p-6 group"
@@ -770,7 +770,7 @@ function FinalCTA() {
             🏆 Matricule-se Agora
           </a>
           <a
-            href="https://wa.me/5511999999999"
+            href="https://wa.me/5511940763058"
             target="_blank"
             rel="noopener noreferrer"
             className="border-2 border-black text-black font-black px-10 py-4 rounded-full text-lg uppercase tracking-wide hover:bg-black/10 transition-colors duration-300"
@@ -849,7 +849,7 @@ function Footer() {
 function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/5511999999999?text=Olá!+Quero+saber+mais+sobre+a+Academia+Podium+em+Cabreúva"
+      href="https://wa.me/5511940763058?text=Olá!+Quero+saber+mais+sobre+a+Academia+Podium"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 hover:bg-green-400 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 animate-pulse-glow transition-all hover:scale-110"
