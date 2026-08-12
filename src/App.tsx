@@ -844,9 +844,11 @@ function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
-                <span className="text-black font-black text-lg">P</span>
-              </div>
+              <img
+                src="/images/logo .png"
+                alt="Logo Academia Podium"
+                className="w-30 h-30 object-contain"
+              />
               <div>
                 <span className="text-white font-black text-xl tracking-widest">PODIUM</span>
                 <p className="text-yellow-400 text-xs tracking-widest font-semibold -mt-1">ACADEMIA</p>
