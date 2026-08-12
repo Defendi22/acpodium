@@ -31,43 +31,43 @@ const MODALITIES: Modality[] = [
     title: "Hapkido",
     tag: "Arte Marcial Coreana",
     desc: "A arte marcial da harmonia e autodefesa. Técnicas de alavancagem, chutes e controle que desenvolvem disciplina e equilíbrio corporal.",
-    img: "https://images.pexels.com/photos/8611373/pexels-photo-8611373.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+    img: "/images/hapkido.png",
   },
   {
     icon: "🤼",
     title: "Jiu-Jitsu",
     tag: "Brazilian Jiu-Jitsu",
     desc: "A arte suave que vence o mais forte. Técnicas de grappling, imobilização e finalização com professores faixa-preta experientes.",
-    img: "https://images.pexels.com/photos/38759464/pexels-photo-38759464.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+    img: "https://images.pexels.com/photos/8611373/pexels-photo-8611373.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
   },
   {
     icon: "🥊",
     title: "Karatê",
     tag: "Arte Marcial Japonesa",
     desc: "Disciplina milenar japonesa. Desenvolva postura, concentração, reflexos rápidos e defesa pessoal com tradição e respeito.",
-    img: "https://images.pexels.com/photos/4401639/pexels-photo-4401639.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+    img: "/images/Karate.png",
   },
   {
     icon: "🏊",
     title: "Natação",
     tag: "Aquático",
     desc: "Piscina semiolímpica com aulas para todas as idades e níveis. Desenvolva técnica, resistência e amor pela água com professores certificados.",
-    img: "https://images.pexels.com/photos/30191398/pexels-photo-30191398.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+    img: "/images/natacao.png",
   },
   {
     icon: "💧",
     title: "Hidroginástica",
     tag: "Baixo Impacto",
     desc: "Exercícios aeróbicos na água com baixo impacto articular. Ideal para todas as idades — melhora o condicionamento, tônus e bem-estar.",
-    img: "https://images.pexels.com/photos/6539730/pexels-photo-6539730.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+    img: "/images/hidroginastica.png",
   },
 ];
 
 const STATS: Stat[] = [
-  { number: "15+", label: "Anos de Experiência", icon: "🏆" },
+  { number: "25+", label: "Anos de Experiência", icon: "🏆" },
   { number: "2.000+", label: "Alunos Ativos", icon: "👥" },
-  { number: "50+", label: "Professores Especializados", icon: "🎓" },
-  { number: "20+", label: "Modalidades", icon: "🏅" },
+  { number: "15+", label: "Professores Especializados", icon: "🎓" },
+  { number: "15+", label: "Modalidades", icon: "🥇" },
 ];
 
 const INFRASTRUCTURE: Infrastructure[] = [
@@ -75,11 +75,8 @@ const INFRASTRUCTURE: Infrastructure[] = [
   { icon: "🏋️‍♂️", title: "Sala de Musculação", desc: "Mais de 200 equipamentos de última geração para treino completo." },
   { icon: "🥋", title: "Dojo de Artes Marciais", desc: "Tatame profissional com área ampla para lutas e treinos técnicos." },
   { icon: "🚿", title: "Vestiários Premium", desc: "Amplos e confortáveis com armários individuais, saunas e duchas." },
-  { icon: "🥗", title: "Espaço Nutricional", desc: "Nutricionista especializada em performance para orientação alimentar." },
-  { icon: "💆", title: "Espaço de Recuperação", desc: "Sala de massagem, crioterapia e alongamento assistido." },
-  { icon: "📱", title: "App de Treinos", desc: "Gerencie seus treinos, acompanhe evolução e agende aulas pelo app." },
+  { icon: "💆", title: "Acompanhamento Profissional", desc: "Toda sua experiencia é acompanhada por profissionais qualificados." },
   { icon: "🅿️", title: "Estacionamento Gratuito", desc: "Amplo estacionamento coberto exclusivo para alunos sem custo adicional." },
-  { icon: "👶", title: "Kids Space", desc: "Espaço especial para crianças com atividades supervisionadas enquanto você treina." },
 ];
 
 const PLANS: Plan[] = [
@@ -194,9 +191,11 @@ function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg animate-pulse-glow">
-              <span className="text-black font-black text-xl">P</span>
-            </div>
+            <img
+              src="/images/logo .png"
+              alt="Logo Academia Podium"
+              className="w-26 h-30 object-contain rounded-full shadow-lg "
+            />
             <div>
               <span className="text-white font-black text-2xl tracking-widest">PODIUM</span>
               <p className="text-yellow-400 text-xs tracking-widest font-semibold -mt-1">ACADEMIA</p>
@@ -303,7 +302,7 @@ function HeroSection() {
             href="#contato"
             className="btn-primary text-black font-black px-10 py-4 rounded-full text-lg uppercase tracking-wide shadow-xl"
           >
-            🏆 Comece Agora — Grátis
+            Comece Agora - Grátis
           </a>
           <a
             href="#modalidades"
@@ -678,7 +677,10 @@ function ContactSection() {
                   type="submit"
                   className="btn-primary w-full text-black font-black py-4 rounded-xl uppercase tracking-wide text-lg flex items-center justify-center gap-2"
                 >
-                  {sent ? "✅ Enviado! Aguarde nosso contato" : "🚀 Enviar via WhatsApp"}
+                  <svg viewBox="0 0 32 32" className="w-5 h-5 fill-current" aria-hidden="true">
+                    <path d="M16 2C8.28 2 2 8.28 2 16c0 2.48.65 4.82 1.79 6.85L2 30l7.35-1.76C11.27 29.38 13.59 30 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5c-2.17 0-4.28-.58-6.12-1.67l-.44-.26-4.57 1.1 1.13-4.44-.28-.46C4.58 20.26 4 18.16 4 16 4 9.37 9.37 4 16 4s12 5.37 12 12-5.37 11.5-12 11.5zm6.58-8.75c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.95-1.79-2.13-2-2.49-.21-.36-.02-.55.16-.73.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.6-.81-.61l-.69-.01c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.55 3.9 6.18 5.47.87.37 1.54.59 2.07.76.87.27 1.66.23 2.28.14.7-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" />
+                  </svg>
+                  {sent ? "✅ Enviado! Aguarde nosso contato" : "Enviar via WhatsApp"}
                 </button>
               </form>
             </div>
@@ -691,8 +693,22 @@ function ContactSection() {
               <h3 className="text-yellow-400 font-black text-lg mb-4">📍 Localização</h3>
               <p className="text-white font-semibold">Academia Podium</p>
               <p className="text-gray-400 mt-1">Cabreúva — SP</p>
+
+              <div className="mt-4 overflow-hidden rounded-xl border border-gray-700">
+                <iframe
+                  title="Mapa da Academia Podium em Cabreúva"
+                  src="https://www.google.com/maps?q=Academia%20Podium%20Cabre%C3%BAva&z=14&output=embed"
+                  width="100%"
+                  height="220"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="block"
+                />
+              </div>
+
               <a
-                href="https://maps.google.com/?q=Cabreúva+SP"
+                href="https://maps.app.goo.gl/xwA3NU2oqr3dvwb9A"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-yellow-400 font-bold text-sm mt-3 hover:underline"
@@ -706,9 +722,9 @@ function ContactSection() {
               <h3 className="text-yellow-400 font-black text-lg mb-4">🕐 Horários de Funcionamento</h3>
               <div className="space-y-2 text-sm">
                 {[
-                  ["Segunda a Sexta", "06h às 22h"],
-                  ["Sábado", "07h às 18h"],
-                  ["Domingo", "08h às 14h"],
+                  ["Segunda a Sexta", "06h às 00h"],
+                  ["Sábado", "07h às 16h"],
+                  ["Domingo", "08h às 12h"],
                 ].map(([day, hours]) => (
                   <div key={day} className="flex justify-between text-gray-300 border-b border-gray-800 pb-2">
                     <span>{day}</span>
@@ -725,7 +741,9 @@ function ContactSection() {
               rel="noopener noreferrer"
               className="flex items-center gap-4 bg-green-600 hover:bg-green-500 transition-colors duration-300 rounded-2xl p-6 group"
             >
-              <div className="text-4xl group-hover:scale-110 transition-transform">💬</div>
+              <svg viewBox="0 0 32 32" className="w-10 h-10 fill-white group-hover:scale-110 transition-transform" aria-hidden="true">
+                <path d="M16 2C8.28 2 2 8.28 2 16c0 2.48.65 4.82 1.79 6.85L2 30l7.35-1.76C11.27 29.38 13.59 30 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5c-2.17 0-4.28-.58-6.12-1.67l-.44-.26-4.57 1.1 1.13-4.44-.28-.46C4.58 20.26 4 18.16 4 16 4 9.37 9.37 4 16 4s12 5.37 12 12-5.37 11.5-12 11.5zm6.58-8.75c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.95-1.79-2.13-2-2.49-.21-.36-.02-.55.16-.73.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.6-.81-.61l-.69-.01c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.55 3.9 6.18 5.47.87.37 1.54.59 2.07.76.87.27 1.66.23 2.28.14.7-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" />
+              </svg>
               <div>
                 <p className="text-white font-black text-lg">Fale pelo WhatsApp</p>
                 <p className="text-green-200 text-sm">Resposta rápida — atendimento imediato!</p>
@@ -734,12 +752,14 @@ function ContactSection() {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/acpodium/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 bg-gradient-to-r from-purple-700 via-pink-600 to-orange-500 hover:opacity-90 transition-opacity duration-300 rounded-2xl p-6 group"
             >
-              <div className="text-4xl group-hover:scale-110 transition-transform">📸</div>
+              <svg viewBox="0 0 24 24" className="w-10 h-10 fill-white group-hover:scale-110 transition-transform" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5Zm5.25-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25Z"/>
+              </svg>
               <div>
                 <p className="text-white font-black text-lg">Siga no Instagram</p>
                 <p className="text-pink-200 text-sm">@academiapodiumcabreuva — Conteúdo diário!</p>
@@ -773,12 +793,45 @@ function FinalCTA() {
             href="https://wa.me/5511940763058"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-black text-black font-black px-10 py-4 rounded-full text-lg uppercase tracking-wide hover:bg-black/10 transition-colors duration-300"
+            className="border-2 border-black text-black font-black px-10 py-4 rounded-full text-lg uppercase tracking-wide hover:bg-black/10 transition-colors duration-300 flex items-center justify-center gap-2"
           >
-            💬 WhatsApp
+            <svg viewBox="0 0 32 32" className="w-5 h-5 fill-current" aria-hidden="true">
+              <path d="M16 2C8.28 2 2 8.28 2 16c0 2.48.65 4.82 1.79 6.85L2 30l7.35-1.76C11.27 29.38 13.59 30 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5c-2.17 0-4.28-.58-6.12-1.67l-.44-.26-4.57 1.1 1.13-4.44-.28-.46C4.58 20.26 4 18.16 4 16 4 9.37 9.37 4 16 4s12 5.37 12 12-5.37 11.5-12 11.5zm6.58-8.75c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.95-1.79-2.13-2-2.49-.21-.36-.02-.55.16-.73.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.6-.81-.61l-.69-.01c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.55 3.9 6.18 5.47.87.37 1.54.59 2.07.76.87.27 1.66.23 2.28.14.7-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" />
+            </svg>
+            WhatsApp
           </a>
         </div>
       </div>
+    </section>
+  );
+}
+
+function SeoSection() {
+  return (
+    <section
+      id="seo"
+      aria-label="SEO para busca do Google"
+      style={{
+        position: "absolute",
+        left: "-9999px",
+        width: "1px",
+        height: "1px",
+        overflow: "hidden",
+      }}
+    >
+      <h2>Academia Podium Cabreúva</h2>
+      <p>
+        Academia em Cabreúva, São Paulo, especializada em musculação, artes marciais, natação,
+        hidroginástica, jiu-jítsu, karatê, hapkido e treinamento funcional. Nossa academia oferece
+        estrutura premium com equipamentos de última geração, professores especializados, aulas em grupo,
+        acompanhamento profissional e ambiente seguro para pessoas de todas as idades. Se você busca a melhor
+        academia em Cabreúva para perder peso, ganhar massa muscular, melhorar condicionamento físico,
+        aprender defesa pessoal ou praticar esporte em um espaço moderno, a Academia Podium é a escolha ideal.
+        Localizada em Cabreúva SP, combinamos qualidade, disciplina, motivação e resultados reais para quem
+        quer evoluir com saúde, foco e performance. Academia de musculação em Cabreúva, academia com
+        piscina, academia de artes marciais, aulas de hapkido, jiu-jitsu e karatê, treinamento personalizado,
+        plano de fitness e estrutura para família e atletas.
+      </p>
     </section>
   );
 }
@@ -839,6 +892,9 @@ function Footer() {
         <div className="border-t border-gray-800 pt-8 text-center text-gray-600 text-sm">
           <p>© {new Date().getFullYear()} Academia Podium Cabreúva — Todos os direitos reservados.</p>
           <p className="mt-1 text-xs">Desenvolvido com ❤️ para a comunidade de Cabreúva e região.</p>
+          <a href="#seo" className="mt-3 inline-block text-yellow-400 hover:text-yellow-300 transition-colors underline-offset-2 hover:underline">
+            SEO — Academia Podium Cabreúva
+          </a>
         </div>
       </div>
     </footer>
@@ -874,6 +930,7 @@ export default function App() {
       <TestimonialsSection />
       <ContactSection />
       <FinalCTA />
+      <SeoSection />
       <Footer />
       <WhatsAppFloat />
     </div>
