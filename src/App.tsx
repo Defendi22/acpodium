@@ -75,8 +75,8 @@ const INFRASTRUCTURE: Infrastructure[] = [
   { icon: "🏋️‍♂️", title: "Sala de Musculação", desc: "Mais de 200 equipamentos de última geração para treino completo." },
   { icon: "🥋", title: "Dojo de Artes Marciais", desc: "Tatame profissional com área ampla para lutas e treinos técnicos." },
   { icon: "🚿", title: "Vestiários Premium", desc: "Amplos e confortáveis com armários individuais, saunas e duchas." },
-  { icon: "💆", title: "Acompanhamento Profissional", desc: "Toda sua experiencia é acompanhada por profissionais qualificados." },
-  { icon: "🅿️", title: "Estacionamento Gratuito", desc: "Amplo estacionamento coberto exclusivo para alunos sem custo adicional." },
+  { icon: "💆", title: "Supervisão Profissional", desc: "Toda sua experiencia é acompanhada por profissionais qualificados." },
+  { icon: "🅿️", title: "Estacionamento Gratuito", desc: "Amplo estacionamento exclusivo para alunos sem custo adicional." },
 ];
 
 const PLANS: Plan[] = [
@@ -432,14 +432,14 @@ function InfrastructureSection() {
         {/* Feature banner */}
         <div className={`mt-12 rounded-2xl overflow-hidden relative ${visible ? "animate-fadeInUp delay-600" : "opacity-0"}`}>
           <div
-            className="relative h-64 sm:h-80 flex items-center justify-center"
+            className="relative h-64 sm:h-90 flex items-center justify-center"
             style={{
-              backgroundImage: "url('https://images.pexels.com/photos/6739958/pexels-photo-6739958.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=1200')",
+              backgroundImage: "url('/images/heroestrutura1.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            <div className="absolute inset-0 bg-black/70" />
+            <div className="absolute inset-0 bg-black/50" />
             <div className="relative z-10 text-center px-4">
               <h3 className="text-3xl sm:text-4xl font-black text-white mb-3">
                 Venha Conhecer Nossa <span className="text-yellow-400">Estrutura</span>
@@ -692,7 +692,7 @@ function ContactSection() {
             <div className="bg-neutral-900 border border-yellow-400/20 rounded-2xl p-6">
               <h3 className="text-yellow-400 font-black text-lg mb-4">📍 Localização</h3>
               <p className="text-white font-semibold">Academia Podium</p>
-              <p className="text-gray-400 mt-1">Cabreúva — SP</p>
+              <p className="text-gray-400 mt-1">Rua Pará, 220, Cabreúva - SP</p>
 
               <div className="mt-4 overflow-hidden rounded-xl border border-gray-700">
                 <iframe
@@ -787,7 +787,7 @@ function FinalCTA() {
             href="#contato"
             className="bg-black text-yellow-400 font-black px-10 py-4 rounded-full text-lg uppercase tracking-wide hover:bg-gray-900 transition-colors duration-300 shadow-xl"
           >
-            🏆 Matricule-se Agora
+            Matricule-se Agora
           </a>
           <a
             href="https://wa.me/5511940763058"
@@ -883,10 +883,10 @@ function Footer() {
           <div>
             <h4 className="text-yellow-400 font-black uppercase tracking-wide text-sm mb-4">Contato</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li className="flex items-start gap-2"><span>📍</span> Cabreúva — SP</li>
-              <li className="flex items-start gap-2"><span>📞</span> (11) 9 9999-9999</li>
-              <li className="flex items-start gap-2"><span>📧</span> contato@podiumcabreuva.com.br</li>
-              <li className="flex items-start gap-2"><span>🕐</span> Seg–Sex: 06h–22h</li>
+              <li className="flex items-start gap-2"><span>📍</span> Rua Pará, 220, Cabreúva - SP</li>
+              <li className="flex items-start gap-2"><span>📞</span> (11) 94076-3058</li>
+              <li className="flex items-start gap-2"><span>📧</span> acpodiumcabreuva@hotmail.com</li>
+              <li className="flex items-start gap-2"><span>🕐</span> Seg–Sex: 06h–00h</li>
             </ul>
           </div>
         </div>
