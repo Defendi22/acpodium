@@ -34,18 +34,19 @@ const MODALITIES: Modality[] = [
     img: "/images/hapkido.png",
   },
   {
-    icon: "🤼",
-    title: "Jiu-Jitsu",
-    tag: "Brazilian Jiu-Jitsu",
-    desc: "A arte suave que vence o mais forte. Técnicas de grappling, imobilização e finalização com professores faixa-preta experientes.",
-    img: "https://images.pexels.com/photos/8611373/pexels-photo-8611373.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
-  },
-  {
-    icon: "🥊",
+        icon: "🥊",
     title: "Karatê",
     tag: "Arte Marcial Japonesa",
     desc: "Disciplina milenar japonesa. Desenvolva postura, concentração, reflexos rápidos e defesa pessoal com tradição e respeito.",
     img: "/images/Karate.png",
+ 
+  },
+  {
+       icon: "🤼",
+    title: "Ballet",
+    tag: "Balé, Dança e Alongamento",
+    desc: "Aulas de ballet clássico e dança para todas as idades. Desenvolva postura, flexibilidade, coordenação e expressão corporal com professores especializados.",
+    img: "/images/Ballet.png",
   },
   {
     icon: "🏊",
@@ -81,36 +82,34 @@ const INFRASTRUCTURE: Infrastructure[] = [
 
 const PLANS: Plan[] = [
   {
-    name: "Básico",
-    price: "R$ 89",
-    period: "/mês",
+    name: "Diaria",
+    price: "R$ 20",
+    period: "/Dia",
     features: [
       "✅ Musculação Livre",
-      "✅ 1 Modalidade de Luta",
       "✅ Avaliação Física",
-      "✅ Acesso ao App",
-      "❌ Piscina",
-      "❌ Aulas em Grupo",
+      "✅ Aulas experimentais",
+      "✅ Acompanhamento Profissional",
+      "❌ Infraestrutura Completa",
     ],
     highlight: false,
   },
   {
     name: "Premium",
-    price: "R$ 149",
+    price: "R$ 139",
     period: "/mês",
     features: [
       "✅ Musculação Livre",
-      "✅ 2 Modalidades de Luta",
-      "✅ Piscina + Natação",
-      "✅ Aulas em Grupo Ilimitadas",
+      "✅ Acompanhamento Profissional",
+      "✅ Infraestrutura Completa",
       "✅ Avaliação Física Mensal",
-      "✅ Acesso ao App",
+
     ],
     highlight: true,
   },
   {
-    name: "Podium Total",
-    price: "R$ 199",
+    name: "Modalidades apartir de",
+    price: "R$ 50",
     period: "/mês",
     features: [
       "✅ Tudo do Premium",
@@ -656,11 +655,11 @@ function ContactSection() {
                     <option value="" className="text-gray-600">Selecione...</option>
                     <option>Musculação</option>
                     <option>Hapkido</option>
-                    <option>Jiu-Jitsu</option>
                     <option>Karatê</option>
                     <option>Natação</option>
                     <option>Hidroginástica</option>
-                    <option>Plano Total (todas)</option>
+                    <option>Ballet</option>
+                    <option>Outro</option>
                   </select>
                 </div>
                 <div>
