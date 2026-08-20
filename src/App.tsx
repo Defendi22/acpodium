@@ -89,7 +89,7 @@ const PLANS: Plan[] = [
       "✅ Musculação Livre",
       "✅ Avaliação Física",
       "✅ Aulas experimentais",
-      "✅ Acompanhamento Profissional",,
+      "✅ Acompanhamento Profissional",
       "❌ Infraestrutura Completa",
     ],
     highlight: false,
@@ -193,6 +193,8 @@ function Navbar() {
             <img
               src="/images/logo .png"
               alt="Logo Academia Podium"
+              width={1000}
+              height={1000}
               className="w-26 h-30 object-contain rounded-full shadow-lg "
             />
             <div>
@@ -281,14 +283,14 @@ function HeroSection() {
         <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/40 rounded-full px-5 py-2 mb-8 mt-2 sm:mt-0 animate-fadeIn">
           <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
           <span className="text-yellow-400 text-sm font-bold tracking-widest uppercase">
-            A Melhor Academia de Cabreúva
+            Academia em Cabreúva
           </span>
         </div>
 
         <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-none mb-4 animate-fadeInUp">
-          SUPERE SEUS
+          ACADEMIA PODIUM:
           <br />
-          <span className="text-yellow-400 yellow-glow">LIMITES</span>
+          <span className="text-yellow-400 yellow-glow">SUPERE SEUS LIMITES</span>
         </h1>
 
         <p className="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fadeInUp delay-200">
@@ -363,7 +365,11 @@ function ModalitiesSection() {
               <div className="relative h-52 overflow-hidden">
                 <img
                   src={mod.img}
-                  alt={mod.title}
+                  alt={`${mod.title} na Academia Podium`}
+                  width={600}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover brightness-75 hover:brightness-90 hover:scale-105 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
@@ -620,8 +626,9 @@ function ContactSection() {
               <h3 className="text-white font-black text-xl mb-6">📋 Quero me Matricular</h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="text-gray-400 text-sm font-semibold block mb-1">Nome Completo *</label>
+                  <label htmlFor="name" className="text-gray-400 text-sm font-semibold block mb-1">Nome Completo *</label>
                   <input
+                    id="name"
                     type="text"
                     required
                     value={form.name}
@@ -632,8 +639,9 @@ function ContactSection() {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="text-gray-400 text-sm font-semibold block mb-1">WhatsApp *</label>
+                    <label htmlFor="phone" className="text-gray-400 text-sm font-semibold block mb-1">WhatsApp *</label>
                     <input
+                      id="phone"
                       type="tel"
                       required
                       value={form.phone}
@@ -643,8 +651,9 @@ function ContactSection() {
                     />
                   </div>
                   <div>
-                    <label className="text-gray-400 text-sm font-semibold block mb-1">E-mail</label>
+                    <label htmlFor="email" className="text-gray-400 text-sm font-semibold block mb-1">E-mail</label>
                     <input
+                      id="email"
                       type="email"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -654,8 +663,9 @@ function ContactSection() {
                   </div>
                 </div>
                 <div>
-                  <label className="text-gray-400 text-sm font-semibold block mb-1">Modalidade de Interesse *</label>
+                  <label htmlFor="modality" className="text-gray-400 text-sm font-semibold block mb-1">Modalidade de Interesse *</label>
                   <select
+                    id="modality"
                     required
                     value={form.modality}
                     onChange={(e) => setForm({ ...form, modality: e.target.value })}
@@ -672,8 +682,9 @@ function ContactSection() {
                   </select>
                 </div>
                 <div>
-                  <label className="text-gray-400 text-sm font-semibold block mb-1">Mensagem (opcional)</label>
+                  <label htmlFor="message" className="text-gray-400 text-sm font-semibold block mb-1">Mensagem (opcional)</label>
                   <textarea
+                    id="message"
                     rows={3}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -814,36 +825,6 @@ function FinalCTA() {
   );
 }
 
-function SeoSection() {
-  return (
-    <section
-      id="seo"
-      aria-label="SEO para busca do Google"
-      style={{
-        position: "absolute",
-        left: "-9999px",
-        width: "1px",
-        height: "1px",
-        overflow: "hidden",
-      }}
-    >
-      <h2>Academia Podium Cabreúva</h2>
-      <p>
-        Academia em Cabreúva, São Paulo, especializada em musculação, artes marciais, natação,
-        hidroginástica, jiu-jítsu, karatê, hapkido e treinamento funcional. Nossa academia oferece
-        estrutura premium com equipamentos de última geração, professores especializados, aulas em grupo,
-        acompanhamento profissional e ambiente seguro para pessoas de todas as idades. Se você busca a melhor
-        academia em Cabreúva para perder peso, ganhar massa muscular, melhorar condicionamento físico,
-        aprender defesa pessoal ou praticar esporte em um espaço moderno, a Academia Podium é a escolha ideal.
-        Localizada em Cabreúva SP, combinamos qualidade, disciplina, motivação e resultados reais para quem
-        quer evoluir com saúde, foco e performance. Academia de musculação em Cabreúva, academia com
-        piscina, academia de artes marciais, aulas de hapkido, jiu-jitsu e karatê, treinamento personalizado,
-        plano de fitness e estrutura para família e atletas.
-      </p>
-    </section>
-  );
-}
-
 function Footer() {
   return (
     <footer className="bg-neutral-950 border-t border-yellow-400/20 py-12 px-4 sm:px-6">
@@ -855,6 +836,8 @@ function Footer() {
               <img
                 src="/images/logo .png"
                 alt="Logo Academia Podium"
+                width={1000}
+                height={1000}
                 className="w-30 h-30 object-contain"
               />
               <div>
@@ -902,8 +885,8 @@ function Footer() {
         <div className="border-t border-gray-800 pt-8 text-center text-gray-600 text-sm">
           <p>© {new Date().getFullYear()} Academia Podium Cabreúva — Todos os direitos reservados.</p>
           <p className="mt-1 text-xs">Desenvolvido com ❤️ para a comunidade de Cabreúva e região.</p>
-          <a href="#seo" className="mt-3 inline-block text-yellow-400 hover:text-yellow-300 transition-colors underline-offset-2 hover:underline">
-            SEO — Academia Podium Cabreúva
+          <a href="#contato" className="mt-3 inline-block text-yellow-400 hover:text-yellow-300 transition-colors underline-offset-2 hover:underline">
+            Fale com a Academia Podium
           </a>
         </div>
       </div>
@@ -940,7 +923,6 @@ export default function App() {
       <TestimonialsSection />
       <ContactSection />
       <FinalCTA />
-      <SeoSection />
       <Footer />
       <WhatsAppFloat />
     </div>
