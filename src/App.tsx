@@ -489,7 +489,7 @@ function PlansSection() {
             >
               {plan.highlight && (
                 <div className="bg-yellow-400 text-black text-center py-2 font-black text-sm uppercase tracking-widest">
-                  ⭐ Mais Popular
+                  Mais Popular
                 </div>
               )}
               <div className={`p-8 ${plan.highlight ? "bg-gradient-to-b from-yellow-950/30 to-black" : "bg-neutral-900"}`}>

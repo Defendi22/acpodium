@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://acpodium.com.br/sitemap.xml
