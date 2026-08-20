@@ -91,6 +91,7 @@ const PLANS: Plan[] = [
       "✅ Aulas experimentais",
       "✅ Acompanhamento Profissional",
       "❌ Infraestrutura Completa",
+      "❌ Modalidades Avançadas",
     ],
     highlight: false,
   },
