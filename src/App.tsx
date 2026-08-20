@@ -65,10 +65,10 @@ const MODALITIES: Modality[] = [
 ];
 
 const STATS: Stat[] = [
-  { number: "25+", label: "Anos de Experiência", icon: "🏆" },
-  { number: "2.000+", label: "Alunos Ativos", icon: "👥" },
-  { number: "15+", label: "Professores Especializados", icon: "🎓" },
-  { number: "15+", label: "Modalidades", icon: "🥇" },
+  { number: "30+", label: "Anos de Experiência", icon: "🏆" },
+  { number: "1.000+", label: "Alunos Ativos", icon: "👥" },
+  { number: "8+", label: "Professores Especializados", icon: "🎓" },
+  { number: "10+", label: "Modalidades", icon: "🥇" },
 ];
 
 const INFRASTRUCTURE: Infrastructure[] = [
@@ -83,25 +83,25 @@ const INFRASTRUCTURE: Infrastructure[] = [
 const PLANS: Plan[] = [
   {
     name: "Diaria",
-    price: "R$ 20",
+    price: "R$ 29,90",
     period: "/Dia",
     features: [
       "✅ Musculação Livre",
       "✅ Avaliação Física",
       "✅ Aulas experimentais",
-      "✅ Acompanhamento Profissional",
+      "✅ Acompanhamento Profissional",,
       "❌ Infraestrutura Completa",
     ],
     highlight: false,
   },
   {
     name: "Premium",
-    price: "R$ 139",
+    price: "R$ 139,90",
     period: "/mês",
     features: [
       "✅ Musculação Livre",
       "✅ Acompanhamento Profissional",
-      "✅ Infraestrutura Completa",
+      "✅ Fitdance incluído",
       "✅ Avaliação Física Mensal",
 
     ],
@@ -109,15 +109,15 @@ const PLANS: Plan[] = [
   },
   {
     name: "Modalidades apartir de",
-    price: "R$ 50",
+    price: "R$ 49,90",
     period: "/mês",
     features: [
-      "✅ Tudo do Premium",
-      "✅ Todas as Modalidades",
-      "✅ Personal Trainer (2x/sem)",
-      "✅ Consulta Nutricional",
-      "✅ Espaço de Recuperação",
-      "✅ Prioridade de Horários",
+      "✅ Musculação Livre - R$139,90/mês",
+      "✅ Fitdance - R$49,90/mês",
+      "✅ Piscina (2x/sem) - R$220,00/mês",
+      "✅ Hapkido (2x/sem) - R$110,00/mês",
+      "✅ Karatê (2x/sem) - R$110,00/mês",
+      "✅ Ballet (2x/sem) - R$130,00/mês",
     ],
     highlight: false,
   },
@@ -501,12 +501,21 @@ function PlansSection() {
                   <span className="text-gray-400 mb-1">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((f) => (
-                    <li key={f} className="text-sm text-gray-300 flex items-start gap-2">
-                      <span className="text-base leading-none">{f.charAt(0)}</span>
-                      <span className={f.startsWith("❌") ? "text-gray-600" : ""}>{f.slice(2)}</span>
-                    </li>
-                  ))}
+                  {plan.features.map((f) => {
+                    const priceIndex = f.lastIndexOf(" - R$");
+                    const label = priceIndex >= 0 ? f.slice(2, priceIndex) : f.slice(2);
+                    const price = priceIndex >= 0 ? f.slice(priceIndex + 3) : "";
+
+                    return (
+                      <li key={f} className="text-sm text-gray-300 flex items-start gap-2">
+                        <span className="text-base leading-none">{f.charAt(0)}</span>
+                        <span className={`flex-1 ${f.startsWith("❌") ? "text-gray-600" : ""}`}>
+                          {label}
+                        </span>
+                        {price && <span className="font-bold text-yellow-400 whitespace-nowrap">{price}</span>}
+                      </li>
+                    );
+                  })}
                 </ul>
                 <a
                   href="#contato"
@@ -723,7 +732,7 @@ function ContactSection() {
                 {[
                   ["Segunda a Sexta", "06h às 00h"],
                   ["Sábado", "07h às 16h"],
-                  ["Domingo", "08h às 12h"],
+                  ["Domingo e Feriados", "08h às 12h"],
                 ].map(([day, hours]) => (
                   <div key={day} className="flex justify-between text-gray-300 border-b border-gray-800 pb-2">
                     <span>{day}</span>
