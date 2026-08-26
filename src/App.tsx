@@ -23,7 +23,7 @@ const MODALITIES: Modality[] = [
     icon: "🏋️",
     title: "Musculação",
     tag: "Força & Hipertrofia",
-    desc: "Equipamentos de última geração para potencializar seus resultados. Acompanhamento profissional individualizado com avaliação física completa.",
+    desc: "Equipamentos de última geração para potencializar seus resultados com supervisão profissional.",
     img: "https://images.pexels.com/photos/5327533/pexels-photo-5327533.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
   },
   {
@@ -45,21 +45,21 @@ const MODALITIES: Modality[] = [
        icon: "🤼",
     title: "Ballet",
     tag: "Balé, Dança e Alongamento",
-    desc: "Aulas de ballet clássico e dança para todas as idades. Desenvolva postura, flexibilidade, coordenação e expressão corporal com professores especializados.",
+    desc: "Aulas de ballet clássico e dança. Desenvolva postura, flexibilidade, coordenação e expressão corporal com professores especializados.",
     img: "/images/Ballet.png",
   },
   {
     icon: "🏊",
     title: "Natação",
     tag: "Aquático",
-    desc: "Piscina semiolímpica com aulas para todas as idades e níveis. Desenvolva técnica, resistência e amor pela água com professores certificados.",
+    desc: "Piscina com aulas para todas as idades e níveis. Desenvolva técnica, resistência e amor pela água com professores certificados.",
     img: "/images/natacao.png",
   },
   {
     icon: "💧",
     title: "Hidroginástica",
     tag: "Baixo Impacto",
-    desc: "Exercícios aeróbicos na água com baixo impacto articular. Ideal para todas as idades — melhora o condicionamento, tônus e bem-estar.",
+    desc: "Exercícios aeróbicos na água com baixo impacto articular. Ideal para todas as idades, melhora o condicionamento, tônus e bem-estar.",
     img: "/images/hidroginastica.png",
   },
 ];
@@ -72,10 +72,10 @@ const STATS: Stat[] = [
 ];
 
 const INFRASTRUCTURE: Infrastructure[] = [
-  { icon: "🏊‍♂️", title: "Piscina Semiolímpica", desc: "Aquecida e coberta, disponível para natação e hidroginástica o ano todo." },
+  { icon: "🏊‍♂️", title: "Piscina", desc: "Aquecida e coberta, disponível para natação e hidroginástica o ano todo com tratamento a sal." },
   { icon: "🏋️‍♂️", title: "Sala de Musculação", desc: "Mais de 200 equipamentos de última geração para treino completo." },
   { icon: "🥋", title: "Dojo de Artes Marciais", desc: "Tatame profissional com área ampla para lutas e treinos técnicos." },
-  { icon: "🚿", title: "Vestiários Premium", desc: "Amplos e confortáveis com armários individuais, saunas e duchas." },
+  { icon: "🚿", title: "Vestiários Premium", desc: "Amplos e confortáveis com vestiarios e duchas." },
   { icon: "💆", title: "Supervisão Profissional", desc: "Toda sua experiencia é acompanhada por profissionais qualificados." },
   { icon: "🅿️", title: "Estacionamento Gratuito", desc: "Amplo estacionamento exclusivo para alunos sem custo adicional." },
 ];
@@ -83,15 +83,17 @@ const INFRASTRUCTURE: Infrastructure[] = [
 const PLANS: Plan[] = [
   {
     name: "Diaria",
-    price: "R$ 29,90",
+    price: "R$ 30,00",
     period: "/Dia",
     features: [
       "✅ Musculação Livre",
-      "✅ Avaliação Física",
-      "✅ Aulas experimentais",
-      "✅ Acompanhamento Profissional",
+      "✅ Supervisão Profissional",
+      "❌ Avaliação Física",
       "❌ Infraestrutura Completa",
       "❌ Modalidades Avançadas",
+      "",
+      "",
+      "",
     ],
     highlight: false,
   },
@@ -101,24 +103,26 @@ const PLANS: Plan[] = [
     period: "/mês",
     features: [
       "✅ Musculação Livre",
-      "✅ Acompanhamento Profissional",
+      "✅ Supervisão Profissional",
       "✅ Fitdance incluído",
-      "✅ Avaliação Física Mensal",
-
+      "✅ Avaliação Física - R$139,90",
+      "",
+      ""
     ],
     highlight: true,
   },
   {
     name: "Modalidades apartir de",
-    price: "R$ 49,90",
+    price: "R$ 50,00",
     period: "/mês",
     features: [
       "✅ Musculação Livre - R$139,90/mês",
-      "✅ Fitdance - R$49,90/mês",
+      "✅ Fitdance - R$50,00/mês",
       "✅ Piscina (2x/sem) - R$220,00/mês",
       "✅ Hapkido (2x/sem) - R$110,00/mês",
       "✅ Karatê (2x/sem) - R$110,00/mês",
       "✅ Ballet (2x/sem) - R$130,00/mês",
+            
     ],
     highlight: false,
   },
@@ -304,7 +308,7 @@ function HeroSection() {
             href="#contato"
             className="btn-primary text-black font-black px-10 py-4 rounded-full text-lg uppercase tracking-wide shadow-xl"
           >
-            Comece Agora - Grátis
+            Comece Agora
           </a>
           <a
             href="#modalidades"
@@ -480,11 +484,11 @@ function PlansSection() {
           </h2>
           <div className="section-divider w-24 mx-auto mb-4" />
           <p className="text-gray-400 max-w-xl mx-auto text-lg">
-            Escolha o plano ideal para seus objetivos. Sem taxa de matrícula no primeiro mês!
+            Escolha o plano ideal para seus objetivos.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 items-start gap-8">
           {PLANS.map((plan, i) => (
             <div
               key={plan.name}
