@@ -23,7 +23,7 @@ const MODALITIES: Modality[] = [
     icon: "🏋️",
     title: "Musculação",
     tag: "Força & Hipertrofia",
-    desc: "Equipamentos de última geração para potencializar seus resultados com supervisão profissional.",
+    desc: "Equipamentos de última geração para potencializar seus resultados. Supervisão profissional com avaliação física completa.",
     img: "https://images.pexels.com/photos/5327533/pexels-photo-5327533.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
   },
   {
@@ -45,7 +45,7 @@ const MODALITIES: Modality[] = [
        icon: "🤼",
     title: "Ballet",
     tag: "Balé, Dança e Alongamento",
-    desc: "Aulas de ballet clássico e dança. Desenvolva postura, flexibilidade, coordenação e expressão corporal com professores especializados.",
+    desc: "Aulas de ballet clássico e dança para todas as idades. Desenvolva postura, flexibilidade, coordenação e expressão corporal com professores especializados.",
     img: "/images/Ballet.png",
   },
   {
@@ -59,7 +59,7 @@ const MODALITIES: Modality[] = [
     icon: "💧",
     title: "Hidroginástica",
     tag: "Baixo Impacto",
-    desc: "Exercícios aeróbicos na água com baixo impacto articular. Ideal para todas as idades, melhora o condicionamento, tônus e bem-estar.",
+    desc: "Exercícios aeróbicos na água com baixo impacto articular. Ideal para todas as idades — melhora o condicionamento, tônus e bem-estar.",
     img: "/images/hidroginastica.png",
   },
 ];
@@ -91,9 +91,7 @@ const PLANS: Plan[] = [
       "❌ Avaliação Física",
       "❌ Infraestrutura Completa",
       "❌ Modalidades Avançadas",
-      "",
-      "",
-      "",
+      "❌ Modalidades Aquaticas",
     ],
     highlight: false,
   },
@@ -105,9 +103,9 @@ const PLANS: Plan[] = [
       "✅ Musculação Livre",
       "✅ Supervisão Profissional",
       "✅ Fitdance incluído",
+      "✅ Avaliação Física Mensal",
       "✅ Avaliação Física - R$139,90",
-      "",
-      ""
+
     ],
     highlight: true,
   },
@@ -122,7 +120,6 @@ const PLANS: Plan[] = [
       "✅ Hapkido (2x/sem) - R$110,00/mês",
       "✅ Karatê (2x/sem) - R$110,00/mês",
       "✅ Ballet (2x/sem) - R$130,00/mês",
-            
     ],
     highlight: false,
   },
@@ -488,7 +485,7 @@ function PlansSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 items-start gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {PLANS.map((plan, i) => (
             <div
               key={plan.name}
