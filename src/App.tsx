@@ -73,7 +73,7 @@ const STATS: Stat[] = [
 
 const INFRASTRUCTURE: Infrastructure[] = [
   { icon: "🏊‍♂️", title: "Piscina", desc: "Aquecida e coberta, disponível para natação e hidroginástica o ano todo com tratamento a sal." },
-  { icon: "🏋️‍♂️", title: "Sala de Musculação", desc: "Mais de 200 equipamentos de última geração para treino completo." },
+  { icon: "🏋️‍♂️", title: "Sala de Musculação", desc: "Mais de 100 equipamentos de última geração para treino completo." },
   { icon: "🥋", title: "Dojo de Artes Marciais", desc: "Tatame profissional com área ampla para lutas e treinos técnicos." },
   { icon: "🚿", title: "Vestiários Premium", desc: "Amplos e confortáveis com vestiarios e duchas." },
   { icon: "💆", title: "Supervisão Profissional", desc: "Toda sua experiencia é acompanhada por profissionais qualificados." },
@@ -103,7 +103,6 @@ const PLANS: Plan[] = [
       "✅ Musculação Livre",
       "✅ Supervisão Profissional",
       "✅ Fitdance incluído",
-      "✅ Avaliação Física Mensal",
       "✅ Avaliação Física - R$139,90",
 
     ],
@@ -617,7 +616,7 @@ function ContactSection() {
           </h2>
           <div className="section-divider w-24 mx-auto mb-4" />
           <p className="text-gray-400 max-w-xl mx-auto text-lg">
-            Matricule-se agora e ganhe a primeira semana grátis. Nossa equipe entrará em contato em até 2 horas!
+            Matricule-se! Nossa equipe entrará em contato em até 2 horas!
           </p>
         </div>
 
@@ -801,7 +800,7 @@ function FinalCTA() {
           SUA TRANSFORMAÇÃO <br />COMEÇA HOJE!
         </h2>
         <p className="text-black/70 text-lg mb-8 max-w-xl mx-auto">
-          Não espere mais. Primeira semana grátis, sem compromisso. Venha conhecer a Academia Podium em Cabreúva!
+          Não espere mais. Sem compromisso. Venha conhecer a Academia Podium em Cabreúva!
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -856,7 +855,7 @@ function Footer() {
           <div>
             <h4 className="text-yellow-400 font-black uppercase tracking-wide text-sm mb-4">Modalidades</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
-              {["Musculação", "Hapkido", "Jiu-Jitsu", "Karatê", "Natação", "Hidroginástica"].map((m) => (
+              {["Musculação", "Hapkido", "Ballet", "Karatê", "Natação", "Hidroginástica"].map((m) => (
                 <li key={m}><a href="#modalidades" className="hover:text-yellow-400 transition-colors">{m}</a></li>
               ))}
             </ul>
@@ -879,7 +878,9 @@ function Footer() {
               <li className="flex items-start gap-2"><span>📍</span> Rua Pará, 220, Cabreúva - SP</li>
               <li className="flex items-start gap-2"><span>📞</span> (11) 94076-3058</li>
               <li className="flex items-start gap-2"><span>📧</span> acpodiumcabreuva@hotmail.com</li>
-              <li className="flex items-start gap-2"><span>🕐</span> Seg–Sex: 06h–00h</li>
+              <li className="flex items-start gap-2"><span>🕐</span> Segunda a Sexta: 06h às 00h</li>
+              <li className="flex items-start gap-2"><span>🕐</span> Sábado: 07h às 16h</li>
+              <li className="flex items-start gap-2"><span>🕐</span> Domingo e Feriados: 08h às 12h</li>
             </ul>
           </div>
         </div>
