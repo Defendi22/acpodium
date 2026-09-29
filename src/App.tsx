@@ -34,6 +34,13 @@ const MODALITIES: Modality[] = [
     img: "/images/hapkido.png",
   },
   {
+    icon: "🥊",
+    title: "Muay Thai",
+    tag: "Arte Marcial Tailandesa",
+    desc: "Treino de golpes com punhos, cotovelos, joelhos e canelas para desenvolver técnica, condicionamento e disciplina.",
+    img: "/images/muay%20thai.webp",
+  },
+  {
         icon: "🥊",
     title: "Karatê",
     tag: "Arte Marcial Japonesa",
@@ -117,6 +124,7 @@ const PLANS: Plan[] = [
       "✅ Fitdance - R$50,00/mês",
       "✅ Piscina (2x/sem) - R$220,00/mês",
       "✅ Hapkido (2x/sem) - R$110,00/mês",
+      "✅ Muay Thai (2x/sem) - R$110,00/mês",
       "✅ Karatê (2x/sem) - R$110,00/mês",
       "✅ Ballet (2x/sem) - R$130,00/mês",
     ],
@@ -484,13 +492,13 @@ function PlansSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {PLANS.map((plan, i) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl overflow-hidden transition-all duration-300 ${
+              className={`relative flex h-full flex-col rounded-2xl overflow-hidden transition-all duration-300 ${
                 plan.highlight
-                  ? "border-2 border-yellow-400 shadow-2xl shadow-yellow-400/20 scale-105"
+                  ? "border-2 border-yellow-400 shadow-2xl shadow-yellow-400/20 xl:scale-105"
                   : "border border-gray-800"
               } ${visible ? `animate-fadeInUp delay-${(i + 1) * 200}` : "opacity-0"}`}
             >
@@ -499,7 +507,7 @@ function PlansSection() {
                   Mais Popular
                 </div>
               )}
-              <div className={`p-8 ${plan.highlight ? "bg-gradient-to-b from-yellow-950/30 to-black" : "bg-neutral-900"}`}>
+              <div className={`flex flex-1 flex-col p-8 ${plan.highlight ? "bg-gradient-to-b from-yellow-950/30 to-black" : "bg-neutral-900"}`}>
                 <h3 className={`text-xl font-black uppercase tracking-wide mb-2 ${plan.highlight ? "text-yellow-400" : "text-white"}`}>
                   {plan.name}
                 </h3>
@@ -507,7 +515,7 @@ function PlansSection() {
                   <span className="text-4xl font-black text-white">{plan.price}</span>
                   <span className="text-gray-400 mb-1">{plan.period}</span>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="flex-1 space-y-3 mb-8">
                   {plan.features.map((f) => {
                     const priceIndex = f.lastIndexOf(" - R$");
                     const label = priceIndex >= 0 ? f.slice(2, priceIndex) : f.slice(2);
@@ -675,6 +683,7 @@ function ContactSection() {
                     <option value="" className="text-gray-600">Selecione...</option>
                     <option>Musculação</option>
                     <option>Hapkido</option>
+                    <option>Muay Thai</option>
                     <option>Karatê</option>
                     <option>Natação</option>
                     <option>Hidroginástica</option>
@@ -855,7 +864,7 @@ function Footer() {
           <div>
             <h4 className="text-yellow-400 font-black uppercase tracking-wide text-sm mb-4">Modalidades</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
-              {["Musculação", "Hapkido", "Ballet", "Karatê", "Natação", "Hidroginástica"].map((m) => (
+              {["Musculação", "Hapkido", "Muay Thai", "Ballet", "Karatê", "Natação", "Hidroginástica"].map((m) => (
                 <li key={m}><a href="#modalidades" className="hover:text-yellow-400 transition-colors">{m}</a></li>
               ))}
             </ul>
